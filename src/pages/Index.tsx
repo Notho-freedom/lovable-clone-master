@@ -1,33 +1,13 @@
 import { Link } from "react-router-dom";
 import { ThumbsUp } from "lucide-react";
-import product1 from "@/assets/product1.png";
-import product2 from "@/assets/product2.png";
+import { products } from "@/data/products";
+import type { Product } from "@/data/products";
 
-const products = [
-  {
-    id: 1,
-    title: "Apprends à créer du contenu vidéo avec ton AVATAR IA",
-    image: product1,
-    discount: "68% off",
-    rating: "100%",
-    ratingCount: 3,
-    originalPrice: "$20.16",
-    salePrice: "$6.48",
-  },
-  {
-    id: 2,
-    title: "Cours rapide : créez des vidéos IA facilement et efficacement",
-    image: product2,
-    discount: "83% off",
-    rating: "0%",
-    ratingCount: 0,
-    originalPrice: "$27.74",
-    salePrice: "$4.63",
-  },
-];
-
-const ProductCard = ({ product }: { product: typeof products[0] }) => (
-  <div className="group overflow-hidden rounded-xl border border-border bg-card transition-shadow hover:shadow-lg">
+const ProductCard = ({ product }: { product: Product }) => (
+  <Link
+    to={`/product/${product.slug}`}
+    className="group block overflow-hidden rounded-xl border border-border bg-card transition-shadow hover:shadow-lg"
+  >
     <div className="relative overflow-hidden">
       <img
         src={product.image}
@@ -54,11 +34,14 @@ const ProductCard = ({ product }: { product: typeof products[0] }) => (
           {product.salePrice}
         </span>
       </div>
-      <button className="w-full rounded-lg bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+      <button
+        onClick={(e) => e.preventDefault()}
+        className="w-full rounded-lg bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+      >
         Buy now
       </button>
     </div>
-  </div>
+  </Link>
 );
 
 const ProductsPage = () => {
