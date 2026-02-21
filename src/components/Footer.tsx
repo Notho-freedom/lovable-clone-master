@@ -35,9 +35,9 @@ const Footer = () => {
           <div className="space-y-3">
             <h4 className="text-sm font-semibold text-muted-foreground">Legal</h4>
             <div className="flex flex-col gap-2">
-              <span className="text-sm text-foreground">Legal notice</span>
-              <span className="text-sm text-foreground">Terms of use</span>
-              <span className="text-sm text-foreground">Privacy policy</span>
+              <Link to="/legal-notice" className="text-sm text-foreground hover:underline">Legal notice</Link>
+              <Link to="/terms-of-service" className="text-sm text-foreground hover:underline">Terms of use</Link>
+              <Link to="/privacy-policy" className="text-sm text-foreground hover:underline">Privacy policy</Link>
             </div>
           </div>
         </div>
