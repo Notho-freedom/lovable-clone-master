@@ -1,30 +1,18 @@
-# Lovable Clone Master
+# lovable-clone-master
 
-Collection of Lovable project clones and adaptations for rapid prototyping and learning.
+Project description and documentation.
 
 ## 🚀 Features
 
-- 🎨 **UI clones** - Replicated designs from Lovable projects
-- 🔧 **Custom adaptations** - Modified versions with custom logic
-- 📚 **Learning resource** - Study reference for modern React patterns
-- 🚀 **Production-ready** - Optimized builds with Vite
+- Modern tech stack
+- Responsive design
+- Production ready
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: TypeScript, Vite, React
-- **Styling**: Tailwind CSS
-- **Build**: Vite
-
-## 📁 Project Structure
-
-`
-lovable-clone-master/
-├── src/
-│   ├── components/     # UI components
-│   └── lib/            # Utilities
-├── public/
-└── package.json
-`
+- TypeScript, Vite, React
+- Tailwind CSS
+- Supabase
 
 ## 🚀 Installation
 
@@ -44,7 +32,7 @@ npm run preview
 
 ## 📊 Status
 
-Active development. Multiple UI clones implemented.
+Active development.
 
 ## 👤 Author
 
